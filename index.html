@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="/images/lock-icon-dark.svg">
+    <title>Encriptador</title>
+  </head>
+  <body>
+    
+      <header class="header" id="header">
+        <div class="desktop-view">
+          <h1>Alura Challenge</h1>
+          <p>Encriptador</p>
+        </div>
+        <div class="tablet-view">
+          <a href="https://www.aluracursos.com" target="_blank">
+            <img src="/images/alura-logo-dark.svg" id="alura-icon" alt="alura icon" class="icono"/>
+          </a>
+        </div>
+        <div class="cel-view">
+            <a href="https://github.com/eziomatellan" target="_blank">
+                <img src="/images/github-logo-dark.svg" id="github" alt="Github icon" class="icono"/>
+            </a>
+            <a href="https://app.aluracursos.com/user/eziomatellan" target="_blank">
+              <img src="/images/alura-logo-light.svg" id="alura-icon" alt="alura icon" class="icono"/>
+            </a>
+            <a href="https://www.linkedin.com/in/eziomatellan/" target="_blank"
+              ><img src="/images/copy-icon-dark.svg" id="linkedin icon" alt="linkedin icon"  class="icono"/>
+            </a>
+          </div>
+        </header>
+    <main class="main">
+      <div class="alert hidden" id="alert"> 
+      </div>
+      <section class="input">
+        <div class="espacio">
+          <div class="instruccion" id="instruccion">
+          <p>Ingrese el texto aquí</p>
+          <small>Solo letras minuscúlas y sin acentos</small>
+          </div>
+          <textarea name="input-text" id="input-text"></textarea>
+        </div>
+    </section>
+    <div class="botones">
+      <button id="encriptar_btn">
+        <img src="/images/lock-icon-dark.svg" id="lock"alt="Encriptar boton" class="icono" class="botones-icono"
+        /></a> 
+        <p class="p-button">Encriptar</p>
+      </button>
+      <button id="desencriptar_btn">
+        <img src="/images/unlock-icon-dark.svg" id="unlock" alt="Desencriptar boton" class="icono"class="botones-icono"
+        /></a>
+        <p class="p-button">Desencriptar</p>
+      </button>
+      <button id="copiar_btn">
+        <img src="/images/copy-icon-dark.svg" id="copy" alt="Copiar boton" class="icono" class="botones-icono"
+        /></a>
+        <p class="p-button">Copiar</p>
+      </button>
+      <button id="mode_btn"> 
+        <img src="/images/dark-mode.svg" id="modo" alt="Cambiar tema boton" class="icono" class="botones-icono"
+        /></a>
+        <p class="p-button">Cambiar tema</p>
+      </button>
+    </div>
+    <section class="output">
+      <div class="contenido" id="contenido">
+      </div>
+      <div class="espacio-output" id="espacio-output">
+        <p>Ningún mensaje fue encontrado</p>
+        <small>Ingresa el texto que desees encriptar o desencriptar</small>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    
+    <div class="footer-redes">
+      <a href="https://github.com/eziomatellan" target="_blank">
+          <img src="/images/github-logo-dark.svg" alt="Github-icon-footer" class="icono"/>
+      </a>
+      <a href="https://app.aluracursos.com/user/eziomatellan" target="_blank">
+        <img src="/images/alura-logo-dark.svg" alt="alura icon" class="icono"/>
+      </a>
+      <a href="https://www.linkedin.com/in/eziomatellan/" target="_blank"
+        ><img src="/images/linkedin-logo-dark.svg"  alt="linkedin icon"  class="icono"/>
+      </a>
+    </div>
+  </footer>
+<script src="scripts.js"></script>
+</body>
+</html>

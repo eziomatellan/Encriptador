@@ -1,0 +1,607 @@
+
+@font-face {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://fonts.google.com/specimen/Inter");
+  }
+  
+  @font-face {
+    font-family: "Inter", monospace;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://fonts.google.com/specimen/Inter");
+  }
+  
+  :root {
+    --first-color: #ff9ecd;
+    --second-color: #fff0f6;
+    --third-color: #34113f;
+    --fourth-color: #8c426d;
+    --fifth-color: #2c1f26;
+    --hover-color: #f074b0;
+    --shadow-color: rgb(44, 31, 38 ,0.4);
+    --font-primary: "Inter", sans-serif;
+    --font-secondary: "Inter", monospace;
+  
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: calc(1rem + 2vw)
+  }
+  
+  
+  body::-webkit-scrollbar {
+    width: 0.1rem;           
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--fourth-color);          
+  }
+  
+  
+  body{
+      background-color: var(--first-color);
+      height: 100vh;
+  }
+  
+  
+  .header{
+    background-color: var(--second-color);
+    height: 10vh;
+    box-shadow: 0rem 0.1875rem 0.3125rem 0rem rgba(0,0,0,0.3);
+  }
+  
+  .cel-view{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+  }
+  
+  .tablet-view{
+    display: none;
+  }
+  
+  .desktop-view{
+    display: none;
+  }
+  
+  .main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+  }
+  
+  .footer{
+    display: none;
+  }
+  
+  .icono{
+    max-height: 100%;
+    width: auto;
+    height: 5vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+  }
+  
+  .alert{
+    background-color: var(--fourth-color);
+    padding: 0.5rem;
+    color: var(--second-color);
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: var(--font-primary);
+  }
+  
+  .alert.show{
+      opacity: 1; 
+  }
+  
+  .alert.hidden{
+    display: none;
+  }
+  
+  section {
+    height: 38vh;
+    font-family: var(--font-secondary);
+  }
+  
+  p{
+    font-size: 1.3rem;
+    color: var(--third-color);
+  }
+  
+  small{
+    font-size: 0.6rem;
+    color: var(--third-color);
+  }
+  
+  .espacio{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .instruccion{
+    position: absolute;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity 0.3 ease;
+  }
+  
+  .instruccion.hidden{
+    opacity:0;
+    pointer-events: none;
+  }
+  
+  .input{
+    order:0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0.1875rem 0.3125rem 0rem var(--shadow-color);
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  
+  }
+  
+  .input textarea{
+    width: 90%;
+    height: 80%;
+    background-color:var(--first-color);
+    border: none;
+    color: var(--third-color);
+    font-family: var(--font-secondary);
+    font-size: 1.3rem;
+    resize: none;
+  }
+  
+  .input textarea:focus{
+    outline: none;
+  }
+  
+  
+  .botones{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--second-color);
+    padding: 1.8%;
+  }
+  
+  button{
+    order: 1;
+    padding: 2%;
+    border: none;
+    background-color: var(--first-color);
+    border-radius: 0.5rem;
+    box-shadow: 0rem 0.09rem 0rem 0rem var(--fourth-color);
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition-duration: 0.2s;
+  }
+  
+  .p-button{
+    display: none;
+  }
+  
+  button:hover{
+    background-color: var(--hover-color);
+  }
+  
+  .output{
+    order: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.3rem;
+    position: relative;
+  }
+  
+  .contenido{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    color: var(--third-color)
+    
+  }
+  
+  .espacio-output{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .espacio-output.hidden{
+    opacity:0;
+    pointer-events: none;
+  }
+  
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+  
+    p{
+      font-size: 1rem;
+      color: var(--third-color);
+    }
+  
+  body{
+    background-color: var(--second-color);
+  }
+  
+  .cel-view{
+    display: none;
+  }
+  
+  .tablet-view{
+    display: flex;
+    height: 100%;
+  }
+  
+  .tablet-view img{
+    width: auto;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .tablet-view a{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  a img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .header{
+    width: 100%;
+    height: 6vh;
+    box-shadow: none;
+  }
+  
+  .tablet-view{
+    padding-left: 1rem;
+  }
+  
+  .desktop-view{
+    display: none;
+  }
+  
+  .main{
+    width: 100%;
+    height: 81vh;
+    display: flex;
+  }
+  
+  .espacio{
+    height: 100%;
+  }
+  
+  .iconos{ 
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .input{
+    box-shadow: none;
+    order: 0;
+    box-sizing: 100%;
+  }
+  
+  .output{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    order: 1;
+  }
+  
+  .contenido{
+    background-color: var(--first-color);
+    box-shadow: 0rem 0.09rem 0rem 0rem var(--fourth-color);
+    border-radius: 0.5em;
+    width: 85%;
+    height: 90%;
+    overflow: auto;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+  }
+  
+  section{
+    height: 35%;
+  }
+  
+  .espacio-output{
+    z-index: 1;
+  }
+  
+  .alert{
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    font-family: var(--font-primary);
+    height: 5vh;
+  }
+  
+  .botones-icono{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .input textarea{
+    border-radius: 0.5em;
+    height: 70%;
+    box-sizing: border-box;
+    width: 85%;
+    padding: 1em;
+    box-shadow: 0rem 0.09rem 0rem 0rem var(--fourth-color);
+    font-size: 0.8rem;
+  }
+  
+  .botones{
+    order:2;
+    height: 30%;
+    flex-wrap: wrap;
+  }
+  
+  button{
+    width: 40%;
+    height: 35%;
+    padding: 0;
+  }
+  
+  .p-button{
+    display: block;
+    font-size: 1rem;
+    padding-left: 1rem;
+    font-family: var(--font-primary);
+  }
+  
+  .footer{
+    background-color: var(--first-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 13vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-redes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+  
+  }
+  
+  @media screen and (min-width: 1025px){
+  
+    p{
+      font-size: 1rem;
+      color: var(--third-color);
+    }
+  
+  body{
+    background-color: var(--second-color);
+  }
+  
+  .cel-view{
+    display: none;
+  }
+  
+  .tablet-view{
+    display: none;
+  }
+  
+  .desktop-view{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .desktop-view h1{
+    font-size: 1rem;
+    color: var(--third-color);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    max-width: 100%;
+    line-height: 0;
+    margin-top: 0.8rem;
+  }
+  
+  .desktop-view p{
+    font-size: 0.8rem;
+    color: var(--third-color);
+    font-family: var(--font-primary);
+    max-width: 100%;
+    line-height: 0.5;
+    margin-top: 0.5rem;
+  }
+  
+  .alert{
+    width: 100%;
+    z-index: 1;
+    top: 12vh;
+    height: 5vh;
+    font-family: var(--font-primary);
+    position: absolute;
+  }
+  
+  .main{
+    width: 100%;
+    height: 74vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  section{
+    width: 42%;
+    height: 100%;
+  }
+  
+  .botones{
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    justify-content:center;
+    gap: 0.4rem;
+  
+  }
+  
+  .p-button{
+    display: block;
+    font-family: var(--font-primary);
+    font-size: 0.6rem;
+    margin-left: 0.3rem;
+    flex-grow: 0.8;
+    text-align: center;
+    margin: 0;
+  
+  }
+  
+  button img{
+    margin-left: 0.5rem;
+  }
+  
+  button{
+    width: 100%;
+    height: 8%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .header{
+    width: 100%;
+    height: 13vh;
+    box-shadow: none;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .desktop-view{
+    box-sizing: border-box;
+  }
+  
+  .espacio{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .instruccion{
+    padding: 1rem;
+  }
+  
+  .instruccion p{
+    font-size: 0.7rem;
+  }
+  .instruccion small{
+    font-size: 0.4rem;
+  }
+  
+  textarea{
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+  
+  .input{
+    box-shadow: none;
+  }
+  
+  .input textarea{
+    width: 65%;
+    height: 70%;
+    font-size: 0.7rem;
+  }
+  
+  .output{
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .espacio-output{
+    z-index: 1;
+    box-sizing: border-box;
+    width: 80%;
+  }
+  
+  .espacio-output p{
+    font-size: 0.7rem;
+    padding-bottom: 0.4rem;
+    max-width: 100%;
+    box-sizing: border-box;
+  
+  }
+  .espacio-output small{
+    font-size: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .contenido{
+    background-color: var(--first-color);
+    padding: 0;
+    width: 80%;
+    height: 85%;
+    border-radius: 1rem;
+    font-size: 0.7rem;
+    padding: 1rem;
+  }
+  
+  .footer{
+    background-color: var(--first-color);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 13vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-redes{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+  
+  
+  }
