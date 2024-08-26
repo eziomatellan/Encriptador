@@ -181,17 +181,17 @@ function changeMode() {
     var root = document.documentElement;
     const shadowButton = document.querySelectorAll('button');
     
-    if (modo.getAttribute("src") === "/images/dark-mode.svg") {
-    modo.setAttribute("src", "/images/light-mode.svg");
+    if (modo.getAttribute("src") === "./images/dark-mode.svg") {
+    modo.setAttribute("src", "./images/light-mode.svg");
     
     iconos.forEach(icono => {
-        if (icono.alt === "Github icon") icono.setAttribute("src", "/images/github-logo-light.svg");
-        if (icono.alt === "alura icon") icono.setAttribute("src", "/images/alura-logo-light.svg");
-        if (icono.alt === "linkedin icon") icono.setAttribute("src", "/images/linkedin-logo-light.svg");
-        if (icono.alt === "Encriptar boton") icono.setAttribute("src", "/images/lock-icon-light.svg");
-        if (icono.alt === "Desencriptar boton") icono.setAttribute("src", "/images/unlock-icon-light.svg");
-        if (icono.alt === "Copiar boton") icono.setAttribute("src", "/images/copy-icon-light.svg");
-        if (icono.alt === "Github-icon-footer") icono.setAttribute("src", "/images/github-logo-light.svg");
+        if (icono.alt === "Github icon") icono.setAttribute("src", "./images/github-logo-light.svg");
+        if (icono.alt === "alura icon") icono.setAttribute("src", "./images/alura-logo-light.svg");
+        if (icono.alt === "linkedin icon") icono.setAttribute("src", "./images/linkedin-logo-light.svg");
+        if (icono.alt === "Encriptar boton") icono.setAttribute("src", "./images/lock-icon-light.svg");
+        if (icono.alt === "Desencriptar boton") icono.setAttribute("src", "./images/unlock-icon-light.svg");
+        if (icono.alt === "Copiar boton") icono.setAttribute("src", "./images/copy-icon-light.svg");
+        if (icono.alt === "Github-icon-footer") icono.setAttribute("src", "./images/github-logo-light.svg");
 
     });
       /* Color changes for dark mode */
@@ -205,16 +205,16 @@ function changeMode() {
     shadowButton.forEach(boton => {
         boton.style.boxShadow = '0rem 0.06rem 0rem 0rem var(--fourth-color)';
     });
-    } else if (modo.getAttribute("src") === "/images/light-mode.svg") {
-        modo.setAttribute("src", "/images/dark-mode.svg");
+    } else if (modo.getAttribute("src") === "./images/light-mode.svg") {
+        modo.setAttribute("src", "./images/dark-mode.svg");
     iconos.forEach(icono => {
-        if (icono.alt === "Github icon") icono.setAttribute("src", "/images/github-logo-dark.svg");
-        if (icono.alt === "alura icon") icono.setAttribute("src", "/images/alura-logo-dark.svg");
-        if (icono.alt === "linkedin icon") icono.setAttribute("src", "/images/linkedin-logo-dark.svg");
-        if (icono.alt === "Encriptar boton") icono.setAttribute("src", "/images/lock-icon-dark.svg");
-        if (icono.alt === "Desencriptar boton") icono.setAttribute("src", "/images/unlock-icon-dark.svg");
-        if (icono.alt === "Copiar boton") icono.setAttribute("src", "/images/copy-icon-dark.svg");
-        if (icono.alt === "Github-icon-footer") icono.setAttribute("src", "/images/github-logo-dark.svg")
+        if (icono.alt === "Github icon") icono.setAttribute("src", "./images/github-logo-dark.svg");
+        if (icono.alt === "alura icon") icono.setAttribute("src", "./images/alura-logo-dark.svg");
+        if (icono.alt === "linkedin icon") icono.setAttribute("src", "./images/linkedin-logo-dark.svg");
+        if (icono.alt === "Encriptar boton") icono.setAttribute("src", "./images/lock-icon-dark.svg");
+        if (icono.alt === "Desencriptar boton") icono.setAttribute("src", "./images/unlock-icon-dark.svg");
+        if (icono.alt === "Copiar boton") icono.setAttribute("src", "./images/copy-icon-dark.svg");
+        if (icono.alt === "Github-icon-footer") icono.setAttribute("src", "./images/github-logo-dark.svg")
 
     });
       /* Color changes for light mode */
